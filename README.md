@@ -364,3 +364,74 @@ for (int i = 1; i <= 3; i++) {
 ```
 
 ---
+
+## 10. Basic Types
+
+### Integer Types
+
+* `short`: typically 2 bytes
+* `int`: typically 4 bytes
+* `long`: typically 4 or 8 bytes depending on the system
+
+### Floating-Point Types
+
+* `float`: single precision (typically 4 bytes)
+* `double`: double precision (typically 8 bytes)
+
+### `char` Type and ASCII Codes
+
+* `char` stores a single character using ASCII encoding
+
+```c
+char letter = 'A';
+printf("%c = %d\n", letter, letter); // Output: A = 65
+```
+
+### `signed` and `unsigned` Modifiers
+
+* `signed`: allows negative and positive values
+* `unsigned`: only allows non-negative values (doubles the positive range)
+
+```c
+unsigned int x = 300;
+int y = -150;
+```
+
+---
+
+## 11. Arrays
+
+### Declaring and Initializing One-Dimensional Arrays
+
+```c
+int numbers[5] = {1, 2, 3, 4, 5};
+```
+
+### Accessing and Operating on Arrays
+
+```c
+for (int i = 0; i < 5; i++) {
+    printf("%d\n", numbers[i]);
+}
+```
+
+### Multidimensional Arrays (Matrices)
+
+```c
+int matrix[2][3] = {
+    {1, 2, 3},
+    {4, 5, 6}
+};
+```
+
+### Equivalence of Pointers and Arrays
+
+* The name of an array acts as a pointer to its first element
+
+```c
+int a[3] = {10, 20, 30};
+int *p = a;
+printf("%d\n", *(p + 1)); // Output: 20
+```
+
+---
