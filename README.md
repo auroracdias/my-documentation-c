@@ -149,3 +149,53 @@ int main() {
 * Always match the format specifier with the variable type.
 * The `&` (ampersand) symbol is used to provide the memory address of the variable where the input will be stored.
 
+---
+
+## 6. Expressions and Operators
+
+### Arithmetic and Unary Operators
+
+| Operator | Description         | Example |
+| -------- | ------------------- | ------- |
+| `+`      | Addition            | `a + b` |
+| `-`      | Subtraction         | `a - b` |
+| `*`      | Multiplication      | `a * b` |
+| `/`      | Division            | `a / b` |
+| `%`      | Modulus (remainder) | `a % b` |
+| `-x`     | Unary minus         | `-x`    |
+| `+x`     | Unary plus          | `+x`    |
+
+### Relational and Logical Operators
+
+| Operator | Description      | Example          |            |         |   |         |
+| -------- | ---------------- | ---------------- | ---------- | ------- | - | ------- |
+| `==`     | Equal to         | `a == b`         |            |         |   |         |
+| `!=`     | Not equal to     | `a != b`         |            |         |   |         |
+| `>`      | Greater than     | `a > b`          |            |         |   |         |
+| `<`      | Less than        | `a < b`          |            |         |   |         |
+| `>=`     | Greater or equal | `a >= b`         |            |         |   |         |
+| `<=`     | Less or equal    | `a <= b`         |            |         |   |         |
+| `&&`     | Logical AND      | `a > 0 && b > 0` |            |         |   |         |
+| \`       |                  | \`               | Logical OR | \`a > 0 |   | b > 0\` |
+| `!`      | Logical NOT      | `!a`             |            |         |   |         |
+
+### Increment and Decrement
+
+| Operator | Description                     | Example |
+| -------- | ------------------------------- | ------- |
+| `++x`    | Pre-increment (increment first) | `++x`   |
+| `x++`    | Post-increment (use then inc)   | `x++`   |
+| `--x`    | Pre-decrement (decrement first) | `--x`   |
+| `x--`    | Post-decrement (use then dec)   | `x--`   |
+
+### Compound Assignment Operators
+
+| Operator | Equivalent To | Example  |
+| -------- | ------------- | -------- |
+| `x += y` | `x = x + y`   | `x += 5` |
+| `x -= y` | `x = x - y`   | `x -= 2` |
+| `x *= y` | `x = x * y`   | `x *= 3` |
+| `x /= y` | `x = x / y`   | `x /= 4` |
+| `x %= y` | `x = x % y`   | `x %= 2` |
+
+---
