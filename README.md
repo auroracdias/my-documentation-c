@@ -50,7 +50,62 @@ Here are a few other useful libraries:
 
 ---
 
-## 2. Compilation and Execution
+## 2. C Fundamentals
+
+### Variables and Constants
+
+Variables are used to store data. Constants are fixed values that don't change.
+
+```c
+int age = 25;
+const float PI = 3.14;
+```
+
+### Assignment and Initialization
+
+Assignment is the act of storing a value into a variable. Initialization happens when the variable is assigned its first value.
+
+```c
+int x = 10; // initialization
+x = 20;     // assignment
+```
+
+### Numeric and Character Literals
+
+```c
+int dec = 100;
+int hex = 0x64;      // hexadecimal
+char ch = 'A';       // character literal
+```
+
+### Comments
+
+```c
+// Single-line comment
+/* Multi-line
+   comment */
+```
+
+### Operator Precedence
+
+C evaluates expressions based on precedence rules. For example:
+
+```c
+int result = 2 + 3 * 4; // result = 14
+```
+
+Multiplication has higher precedence than addition.
+
+### Type Conversion (Implicit)
+
+```c
+int i = 10;
+double d = i; // Implicit conversion from int to double
+```
+
+---
+
+## 3. Compilation and Execution
 
 To compile and run the program, use the following command:
 
@@ -73,7 +128,7 @@ gcc hello.c -o hello
 
 ---
 
-## 3. Running the Program
+## 4. Running the Program
 
 ### On Linux/macOS:
 
@@ -93,7 +148,7 @@ hello.exe
 
 ---
 
-## 4. Data Input and Output
+## 5. Data Input and Output
 
 Data input and output operations in C are mainly done using functions like `printf` and `scanf`.
 
@@ -128,7 +183,7 @@ Escape sequences are special characters used to control formatting in strings:
 
 ---
 
-## 5. Reading Input with `scanf()`
+## 6. Reading Input with `scanf()`
 
 To read input from the user, we use the `scanf()` function. Here's a basic example:
 
@@ -151,7 +206,7 @@ int main() {
 
 ---
 
-## 6. Expressions and Operators
+## 7. Expressions and Operators
 
 ### Arithmetic and Unary Operators
 
@@ -197,5 +252,115 @@ int main() {
 | `x *= y` | `x = x * y`   | `x *= 3` |
 | `x /= y` | `x = x / y`   | `x /= 4` |
 | `x %= y` | `x = x % y`   | `x %= 2` |
+
+---
+
+## 8. Selection Statements
+
+Selection statements allow you to control the flow of the program based on conditions.
+
+### `if` and `if-else`
+
+```c
+int number = 10;
+if (number > 0) {
+    printf("Positive number\n");
+} else {
+    printf("Zero or negative number\n");
+}
+```
+
+### Nested `if`
+
+```c
+int num = 25;
+if (num > 0) {
+    if (num % 2 == 0) {
+        printf("Even and positive\n");
+    } else {
+        printf("Odd and positive\n");
+    }
+}
+```
+
+### `switch` Statement
+
+```c
+int day = 3;
+switch (day) {
+    case 1:
+        printf("Monday\n");
+        break;
+    case 2:
+        printf("Tuesday\n");
+        break;
+    case 3:
+        printf("Wednesday\n");
+        break;
+    default:
+        printf("Another day\n");
+}
+```
+
+### Conditional Operator `(?:)`
+
+```c
+int age = 18;
+printf("%s\n", (age >= 18) ? "Adult" : "Minor");
+```
+
+---
+
+## 9. Loops and Iteration
+
+Loops allow repeating blocks of code, which is useful when performing repetitive tasks.
+
+### `while` Loop
+
+```c
+int i = 0;
+while (i < 5) {
+    printf("%d\n", i); // Prints i from 0 to 4
+    i++; // Increments i by 1
+}
+```
+
+### `do-while` Loop
+
+```c
+int i = 0;
+do {
+    printf("%d\n", i); // Executes at least once
+    i++;
+} while (i < 5);
+```
+
+### `for` Loop
+
+```c
+for (int i = 0; i < 5; i++) {
+    printf("%d\n", i); // Prints numbers 0 to 4
+}
+```
+
+### `break` and `continue`
+
+```c
+for (int i = 0; i < 10; i++) {
+    if (i == 5) continue; // Skip printing 5
+    if (i == 8) break;    // Stop the loop when i is 8
+    printf("%d\n", i);
+}
+```
+
+### Nested Loops
+
+```c
+for (int i = 1; i <= 3; i++) {
+    for (int j = 1; j <= 2; j++) {
+        printf("i = %d, j = %d\n", i, j); // Inner loop prints j for each i
+    }
+}
+```
 
 ---
